@@ -43,7 +43,7 @@ h1 {
 }
 
 p {
-  color: var(--dark-grayish-magenta, hsl(300, 43%, 22%));
+  color: var(--dark-grayish-magenta, hsl(300, 24%, 96%));
 }
 
 .attribution {
@@ -90,4 +90,38 @@ p {
   justify-content: space-between;
   width: 120px;
   height: 16px;
+}
+
+.review-box {
+  background-color: var(--very-dark-magenta);
+  border-radius: 5px;
+  margin-bottom: 16px;
+  padding: 30px 30px 10px;
+}
+
+.review-avatar {
+  border-radius: 50%;
+  width: 40px;
+  float: left;
+  margin-right: 30px;
+}
+
+h2 {
+  color: var(--white, white);
+  margin: 0;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.verified {
+  color: var(--soft-pink, hsl(333, 80%, 67%));
+  margin: 0;
+  font-size: 15px;
+}
+
+.review {
+  color: var(--light-grayish-magenta, hsl(300, 24%, 96%));
+  font-size: 14px;
+  margin: 30px 0;
+  line-height: 22px;
 }
