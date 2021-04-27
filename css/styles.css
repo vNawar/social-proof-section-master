@@ -6,33 +6,18 @@
   --white: hsl(0, 0%, 100%);
 }
 
-@media screen and (max-width: 800px) {
-  :root {
-    --flex-direction: column;
-    --bg-pattern-size: 90%;
-  }
-}
-
-@media screen and (min-width: 801px) {
-  :root {
-    --flex-direction: row;
-    --bg-pattern-size: 45%;
-  }
-}
-
 main {
   width: 90%;
-  margin: 5em auto;
+  margin: 5em auto 0;
 }
 
 body {
   background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
   background-repeat: no-repeat;
   background-position: top left, bottom right;
-  height: 100vh;
   width: 100%;
   margin: 0;
-  background-size: var(--bg-pattern-size, 70%);
+  background-size: 90%;
   font-family: "Spartan", sans-serif;
   font-size: 15px;
 }
@@ -47,8 +32,7 @@ p {
 }
 
 .attribution {
-  position: fixed;
-  bottom: 0;
+  margin-top: 5em;
   width: 100%;
   text-align: center;
 }
@@ -56,16 +40,13 @@ p {
 .grid {
   display: grid;
   row-gap: 20px;
-  justify-content: center;
+  grid-template-columns: 1fr;
 }
 
-.flexbox {
+.row2,
+.row3 {
   display: flex;
   flex-direction: column;
-}
-
-.row1 {
-  text-align: center;
 }
 
 .ratings-box {
@@ -74,7 +55,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-direction: var(--flex-direction, column);
+  flex-direction: column;
   margin-bottom: 16px;
   height: 64px;
 }
@@ -95,7 +76,6 @@ p {
 .review-box {
   background-color: var(--very-dark-magenta);
   border-radius: 5px;
-  margin-bottom: 16px;
   padding: 30px 30px 10px;
 }
 
@@ -124,4 +104,75 @@ h2 {
   font-size: 14px;
   margin: 30px 0;
   line-height: 22px;
+}
+
+@media screen and (max-width: 991px) {
+  .row1 {
+    text-align: center;
+  }
+
+  .review-box {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-size: 45%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 30px;
+  }
+
+  .ratings-box {
+    flex-direction: row;
+  }
+
+  /* Ratings */
+  .row2 > .flex-item1 {
+    margin-right: 50px;
+  }
+
+  .row2 > .flex-item2 {
+    margin-left: 50px;
+    margin-right: 25px;
+  }
+
+  .row2 > .flex-item3 {
+    margin-left: 100px;
+  }
+
+  /* Reviews */
+  .row3 > .flex-item1 {
+    margin-bottom: 50px;
+  }
+
+  .row3 > .flex-item2 {
+    margin: 25px 30px;
+  }
+
+  .row3 > .flex-item3 {
+    margin-top: 50px;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0 100px 10px 0;
+  }
+
+  .row1 > p {
+    margin: 0;
+    padding-right: 50px;
+  }
+
+  .row3 {
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .row3 > .flex-item2 {
+  }
 }
