@@ -132,12 +132,12 @@ h2 {
 
   /* Ratings */
   .row2 > .flex-item1 {
-    margin-right: 50px;
+    margin-right: 100px;
   }
 
   .row2 > .flex-item2 {
     margin-left: 50px;
-    margin-right: 25px;
+    margin-right: 50px;
   }
 
   .row2 > .flex-item3 {
@@ -159,20 +159,22 @@ h2 {
 
   h1 {
     margin: 0;
-    padding: 0 100px 10px 0;
+    padding: 0 300px 10px 0;
+    font-size: 40px;
   }
 
   .row1 > p {
+    padding-right: 200px;
     margin: 0;
-    padding-right: 50px;
+  }
+
+  .row2 {
+    padding: 0 20px;
   }
 
   .row3 {
     flex-direction: row;
     grid-column-start: 1;
     grid-column-end: 3;
-  }
-
-  .row3 > .flex-item2 {
   }
 }
